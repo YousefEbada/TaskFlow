@@ -424,43 +424,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.themeManager = new ThemeManager();
   
   // Initialize task manager
-  window.taskManager = new TaskManager();
+  // window.taskManager = new TaskManager();
 });
 
-// Add some sample tasks for demo (remove in production)
-window.addEventListener("load", () => {
-  if (window.taskManager && window.taskManager.tasks.length === 0) {
-    window.taskManager.tasks = [
-      {
-        id: 1,
-        text: "Complete project documentation",
-        completed: false,
-        priority: "high",
-        dueDate: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-        category: "Work",
-        createdAt: new Date().toISOString(),
-      },
-      {
-        id: 2,
-        text: "Buy groceries for the week",
-        completed: true,
-        priority: "medium",
-        dueDate: "",
-        category: "Personal",
-        createdAt: new Date().toISOString(),
-      },
-      {
-        id: 3,
-        text: "Call dentist for appointment",
-        completed: false,
-        priority: "low",
-        dueDate: "",
-        category: "Health",
-        createdAt: new Date().toISOString(),
-      },
-    ];
-    window.taskManager.saveTasks();
-    window.taskManager.renderTasks();
-    window.taskManager.updateStats();
-  }
-});
