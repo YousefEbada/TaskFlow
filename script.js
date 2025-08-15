@@ -424,6 +424,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.themeManager = new ThemeManager();
   
   // Initialize task manager
-  // window.taskManager = new TaskManager();
+  window.taskManager = new TaskManager();
 });
 
